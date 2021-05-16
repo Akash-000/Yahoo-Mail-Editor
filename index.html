@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Yahoo Mail</title>
+    <meta name="description" content="Send and Receive Mail">
+    <meta name="author" content="Akash">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="icon/png" href="images/icon.png">
+    <link rel="stylesheet" type="text/css" href="css/MailStyle.css" />
+</head>
+<body>
+    <header>
+        <img src="images/close.png" id="Cross" />
+        <br />
+    </header>
+    <main>
+        <form>
+            <div class="ForInput">
+                <label for="SenderMail">From : </label>
+                <span id="Default">Akash Chauhan &lt;akchauhan@yahoo.co.in&gt;</span>
+            </div>
+            <div class="ForInput">
+                <label for="ReceiverMail">To : </label>
+                <input type="text" id="ReceiverMail"/>
+                <input type="button" value="Cc / Bcc" id="CcBtn" onclick="ShowCcBcc()" />
+            </div>
+            <div class="Toggle ForInput">
+                <label for="CC">Cc : </label>
+                <input type="text" style="width:96%;" id="CC" />
+            </div>
+            <div class="Toggle ForInput">
+                <label for="BCC">Bcc : </label>
+                <input type="text" style="width:96%;" id="BCC" />
+            </div>
+            <div class="ForInput">
+                <label>Subject : </label>
+                <input type="text" id="SubText" />
+            </div>
+            <div class="ForInput">
+                <div contenteditable="true" id="Editor">
+                </div>
+            </div>
+        </form>
+    </main>
+    <br />
+    <footer>
+        <div>
+            <input type="button" value="Send" id="Send" onclick="SendMessage()" />
+        </div>
+        <div>
+            <label id="FileAttachment">
+                <abbr title="Attach File"> &#128206;</abbr>
+                <input type="file" />
+            </label>
+        </div>
+        <div>
+            <img src="images/allimages-1.png"/>
+        </div>
+        <fieldset id="Field">
+            <button class="fontStyle" onclick="BoldText()" title="Bold Highlighted Text" id="BoldText">
+                <b>B</b>
+            </button>
+            <button class="fontStyle" onclick="ItalicText()" title="Italicize Highlighted Text" id="ItalicText">
+                <i>I</i>
+            </button>
+        </fieldset>
+        <div>
+            <img src="images/moreimages.png" id="MoreImages"/>
+        </div>
+        <div class="SavedRight">
+            <br />
+            <span>Saved</span>
+        </div>
+        <div>
+            <br>
+            <img src="images/bin.jpg" id="BinIcon"/>
+        </div>
+    </footer>
+    <script src="./js/MailScript.js"></script>
+</body>
+</html>
